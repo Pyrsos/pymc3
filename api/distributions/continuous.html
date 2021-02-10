@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Continuous &#8212; PyMC3 3.10.0 documentation</title>
+    <title>Continuous &#8212; PyMC3 3.11.0 documentation</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/semantic-sphinx.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
@@ -106,67 +106,158 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Laplace" title="pymc3.distributions.continuous.Laplace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Laplace</span></code></a>(name, *args, **kwargs)</p></td>
 <td><p>Laplace log-likelihood.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.StudentT" title="pymc3.distributions.continuous.StudentT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StudentT</span></code></a>(name, *args, **kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.AsymmetricLaplace" title="pymc3.distributions.continuous.AsymmetricLaplace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AsymmetricLaplace</span></code></a>(name, *args, **kwargs)</p></td>
+<td><p>Asymmetric-Laplace log-likelihood.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.StudentT" title="pymc3.distributions.continuous.StudentT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StudentT</span></code></a>(name, *args, **kwargs)</p></td>
 <td><p>Student’s T log-likelihood.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.HalfStudentT" title="pymc3.distributions.continuous.HalfStudentT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HalfStudentT</span></code></a>(name, *args, **kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.HalfStudentT" title="pymc3.distributions.continuous.HalfStudentT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HalfStudentT</span></code></a>(name, *args, **kwargs)</p></td>
 <td><p>Half Student’s T log-likelihood</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Cauchy" title="pymc3.distributions.continuous.Cauchy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Cauchy</span></code></a>(name, *args, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Cauchy" title="pymc3.distributions.continuous.Cauchy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Cauchy</span></code></a>(name, *args, **kwargs)</p></td>
 <td><p>Cauchy log-likelihood.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.HalfCauchy" title="pymc3.distributions.continuous.HalfCauchy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HalfCauchy</span></code></a>(name, *args, **kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.HalfCauchy" title="pymc3.distributions.continuous.HalfCauchy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HalfCauchy</span></code></a>(name, *args, **kwargs)</p></td>
 <td><p>Half-Cauchy log-likelihood.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Gamma" title="pymc3.distributions.continuous.Gamma"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gamma</span></code></a>(name, *args, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Gamma" title="pymc3.distributions.continuous.Gamma"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gamma</span></code></a>(name, *args, **kwargs)</p></td>
 <td><p>Gamma log-likelihood.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.InverseGamma" title="pymc3.distributions.continuous.InverseGamma"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InverseGamma</span></code></a>(name, *args, **kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.InverseGamma" title="pymc3.distributions.continuous.InverseGamma"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InverseGamma</span></code></a>(name, *args, **kwargs)</p></td>
 <td><p>Inverse gamma log-likelihood, the reciprocal of the gamma distribution.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Weibull" title="pymc3.distributions.continuous.Weibull"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Weibull</span></code></a>(name, *args, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Weibull" title="pymc3.distributions.continuous.Weibull"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Weibull</span></code></a>(name, *args, **kwargs)</p></td>
 <td><p>Weibull log-likelihood.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Lognormal" title="pymc3.distributions.continuous.Lognormal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Lognormal</span></code></a>(name, *args, **kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Lognormal" title="pymc3.distributions.continuous.Lognormal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Lognormal</span></code></a>(name, *args, **kwargs)</p></td>
 <td><p>Log-normal log-likelihood.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.ChiSquared" title="pymc3.distributions.continuous.ChiSquared"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChiSquared</span></code></a>(name, *args, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.ChiSquared" title="pymc3.distributions.continuous.ChiSquared"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChiSquared</span></code></a>(name, *args, **kwargs)</p></td>
 <td><p><span class="math notranslate nohighlight">\(\chi^2\)</span> log-likelihood.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Wald" title="pymc3.distributions.continuous.Wald"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Wald</span></code></a>(name, *args, **kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Wald" title="pymc3.distributions.continuous.Wald"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Wald</span></code></a>(name, *args, **kwargs)</p></td>
 <td><p>Wald log-likelihood.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Pareto" title="pymc3.distributions.continuous.Pareto"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Pareto</span></code></a>(name, *args, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Pareto" title="pymc3.distributions.continuous.Pareto"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Pareto</span></code></a>(name, *args, **kwargs)</p></td>
 <td><p>Pareto log-likelihood.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.ExGaussian" title="pymc3.distributions.continuous.ExGaussian"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExGaussian</span></code></a>(name, *args, **kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.ExGaussian" title="pymc3.distributions.continuous.ExGaussian"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExGaussian</span></code></a>(name, *args, **kwargs)</p></td>
 <td><p>Exponentially modified Gaussian log-likelihood.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.VonMises" title="pymc3.distributions.continuous.VonMises"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VonMises</span></code></a>(name, *args, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.VonMises" title="pymc3.distributions.continuous.VonMises"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VonMises</span></code></a>(name, *args, **kwargs)</p></td>
 <td><p>Univariate VonMises log-likelihood.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Triangular" title="pymc3.distributions.continuous.Triangular"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Triangular</span></code></a>(name, *args, **kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Triangular" title="pymc3.distributions.continuous.Triangular"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Triangular</span></code></a>(name, *args, **kwargs)</p></td>
 <td><p>Continuous Triangular log-likelihood</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Gumbel" title="pymc3.distributions.continuous.Gumbel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gumbel</span></code></a>(name, *args, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Gumbel" title="pymc3.distributions.continuous.Gumbel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gumbel</span></code></a>(name, *args, **kwargs)</p></td>
 <td><p>Univariate Gumbel log-likelihood</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Rice" title="pymc3.distributions.continuous.Rice"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Rice</span></code></a>(name, *args, **kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Rice" title="pymc3.distributions.continuous.Rice"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Rice</span></code></a>(name, *args, **kwargs)</p></td>
 <td><p>Rice distribution.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Logistic" title="pymc3.distributions.continuous.Logistic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Logistic</span></code></a>(name, *args, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Logistic" title="pymc3.distributions.continuous.Logistic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Logistic</span></code></a>(name, *args, **kwargs)</p></td>
 <td><p>Logistic log-likelihood.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.LogitNormal" title="pymc3.distributions.continuous.LogitNormal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogitNormal</span></code></a>(name, *args, **kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.LogitNormal" title="pymc3.distributions.continuous.LogitNormal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogitNormal</span></code></a>(name, *args, **kwargs)</p></td>
 <td><p>Logit-Normal log-likelihood.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Interpolated" title="pymc3.distributions.continuous.Interpolated"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Interpolated</span></code></a>(name, *args, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymc3.distributions.continuous.Interpolated" title="pymc3.distributions.continuous.Interpolated"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Interpolated</span></code></a>(name, *args, **kwargs)</p></td>
 <td><p>Univariate probability distribution defined as a linear interpolation of probability density function evaluated on some lattice of points.</p></td>
 </tr>
 </tbody>
 </table>
 <span class="target" id="module-pymc3.distributions.continuous"></span><p>A collection of common probability distributions for stochastic
 nodes in PyMC.</p>
+<dl class="py class">
+<dt id="pymc3.distributions.continuous.AsymmetricLaplace">
+<em class="property">class </em><code class="sig-prename descclassname">pymc3.distributions.continuous.</code><code class="sig-name descname">AsymmetricLaplace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.continuous.AsymmetricLaplace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asymmetric-Laplace log-likelihood.</p>
+<p>The pdf of this distribution is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{f(x|\\b,\kappa,\mu) =
+    \left({\frac{\\b}{\kappa + 1/\kappa}}\right)\,e^{-(x-\mu)\\b\,s\kappa ^{s}}}\end{split}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[s = sgn(x-\mu)\]</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Support</p></td>
+<td><p><span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Mean</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mu-\frac{\\\kappa-1/\kappa}b\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Variance</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1+\kappa^{4}}{b^2\kappa^2 }\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>b: float</strong></dt><dd><p>Scale parameter (b &gt; 0)</p>
+</dd>
+<dt><strong>kappa: float</strong></dt><dd><p>Symmetry parameter (kappa &gt; 0)</p>
+</dd>
+<dt><strong>mu: float</strong></dt><dd><p>Location parameter</p>
+</dd>
+<dt><strong>See Also:</strong></dt><dd></dd>
+<dt><strong>——–</strong></dt><dd></dd>
+<dt><strong>`Reference &lt;https://en.wikipedia.org/wiki/Asymmetric_Laplace_distribution&gt;`_</strong></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pymc3.distributions.continuous.AsymmetricLaplace.logp">
+<code class="sig-name descname">logp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.continuous.AsymmetricLaplace.logp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate log-probability of Asymmetric-Laplace distribution at specified value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log-probability is calculated. If the log probabilities for multiple
+values are desired the values must be provided in a numpy array or theano tensor</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>TensorVariable</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pymc3.distributions.continuous.AsymmetricLaplace.random">
+<code class="sig-name descname">random</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">point</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.continuous.AsymmetricLaplace.random" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw random samples from this distribution, using the inverse CDF method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>point: dict, optional</strong></dt><dd><p>Dict of variable values on which random values are to be
+conditioned (uses default point if not specified).</p>
+</dd>
+<dt><strong>size:int, optional</strong></dt><dd><p>Desired size of random sample (returns one sample if not
+specified).</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>array</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="py class">
 <dt id="pymc3.distributions.continuous.Beta">
 <em class="property">class </em><code class="sig-prename descclassname">pymc3.distributions.continuous.</code><code class="sig-name descname">Beta</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.continuous.Beta" title="Permalink to this definition">¶</a></dt>
@@ -227,8 +318,7 @@ at the specified value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
-values are desired the values must be provided in a numpy array or theano tensor.</p>
+<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated.</p>
 </dd>
 </dl>
 </dd>
@@ -336,7 +426,7 @@ at the specified value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
 values are desired the values must be provided in a numpy array or theano tensor.</p>
 </dd>
 </dl>
@@ -502,7 +592,7 @@ at the specified value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
 values are desired the values must be provided in a numpy array or theano tensor.</p>
 </dd>
 </dl>
@@ -612,7 +702,7 @@ at the specified value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
 values are desired the values must be provided in a numpy array or theano tensor.</p>
 </dd>
 </dl>
@@ -621,14 +711,6 @@ values are desired the values must be provided in a numpy array or theano tensor
 <dd class="field-even"><dl class="simple">
 <dt>TensorVariable</dt><dd></dd>
 </dl>
-</dd>
-</dl>
-<p class="rubric">References</p>
-<dl class="citation">
-<dt class="label" id="re8a42a770a5e-machler2012"><span class="brackets">Machler2012</span></dt>
-<dd><p>Martin Mächler (2012).
-“Accurately computing <span class="math notranslate nohighlight">\(\log(1-\exp(-\mid a \mid))\)</span> Assessed by the Rmpfr
-package”</p>
 </dd>
 </dl>
 </dd></dl>
@@ -691,7 +773,7 @@ at the specified value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
 values are desired the values must be provided in a numpy array or theano tensor.</p>
 </dd>
 </dl>
@@ -804,7 +886,7 @@ at the specified value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
 values are desired the values must be provided in a numpy array or theano tensor.</p>
 </dd>
 </dl>
@@ -913,7 +995,7 @@ at the specified value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
 values are desired the values must be provided in a numpy array or theano tensor.</p>
 </dd>
 </dl>
@@ -1018,7 +1100,7 @@ at the specified value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
 values are desired the values must be provided in a numpy array or theano tensor.</p>
 </dd>
 </dl>
@@ -1088,7 +1170,7 @@ at the specified value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
 values are desired the values must be provided in a numpy array or theano tensor.</p>
 </dd>
 </dl>
@@ -1208,7 +1290,7 @@ at the specified value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
 values are desired the values must be provided in a numpy array or theano tensor.</p>
 </dd>
 </dl>
@@ -1488,7 +1570,7 @@ at the specified value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
 values are desired the values must be provided in a numpy array or theano tensor.</p>
 </dd>
 </dl>
@@ -1677,7 +1759,7 @@ at the specified value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
 values are desired the values must be provided in a numpy array or theano tensor.</p>
 </dd>
 </dl>
@@ -1782,7 +1864,7 @@ at the specified value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
 values are desired the values must be provided in a numpy array or theano tensor.</p>
 </dd>
 </dl>
@@ -1791,14 +1873,6 @@ values are desired the values must be provided in a numpy array or theano tensor
 <dd class="field-even"><dl class="simple">
 <dt>TensorVariable</dt><dd></dd>
 </dl>
-</dd>
-</dl>
-<p class="rubric">References</p>
-<dl class="citation">
-<dt class="label" id="r2f2c9ecd1839-machler2012"><span class="brackets">Machler2012</span></dt>
-<dd><p>Martin Mächler (2012).
-“Accurately computing :math:  <cite>log(1-exp(- mid a mid&lt;))</cite> Assessed by the Rmpfr
-package”</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1998,7 +2072,7 @@ at the specified value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
 values are desired the values must be provided in a numpy array or theano tensor.</p>
 </dd>
 </dl>
@@ -2105,7 +2179,7 @@ at the specified value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
 values are desired the values must be provided in a numpy array or theano tensor.</p>
 </dd>
 </dl>
@@ -2226,7 +2300,7 @@ at the specified value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
 values are desired the values must be provided in a numpy array or theano tensor.</p>
 </dd>
 </dl>
@@ -2333,7 +2407,7 @@ at the specified value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
 values are desired the values must be provided in a numpy array or theano tensor.</p>
 </dd>
 </dl>
@@ -2645,8 +2719,7 @@ at the specified value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
-values are desired the values must be provided in a numpy array or theano tensor.</p>
+<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated.</p>
 </dd>
 </dl>
 </dd>
@@ -2757,7 +2830,7 @@ at the specified value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
 values are desired the values must be provided in a numpy array or theano tensor.</p>
 </dd>
 </dl>
@@ -2965,7 +3038,7 @@ at the specified value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
 values are desired the values must be provided in a numpy array or theano tensor.</p>
 </dd>
 </dl>
@@ -3190,7 +3263,7 @@ at the specified value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
 values are desired the values must be provided in a numpy array or theano tensor.</p>
 </dd>
 </dl>
@@ -3296,7 +3369,7 @@ at the specified value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>value: numeric</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
 values are desired the values must be provided in a numpy array or theano tensor.</p>
 </dd>
 </dl>
@@ -3305,14 +3378,6 @@ values are desired the values must be provided in a numpy array or theano tensor
 <dd class="field-even"><dl class="simple">
 <dt>TensorVariable</dt><dd></dd>
 </dl>
-</dd>
-</dl>
-<p class="rubric">References</p>
-<dl class="citation">
-<dt class="label" id="r6587fbdd04ec-machler2012"><span class="brackets">Machler2012</span></dt>
-<dd><p>Martin Mächler (2012).
-“Accurately computing <cite>log(1-exp(- mid a mid))</cite> Assessed by the Rmpfr
-package”</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3391,7 +3456,7 @@ specified).</p>
             &copy; Copyright 2018, The PyMC Development Team.
         </p>
         <p>
-            Created using <a href="https://sphinx-doc.org/">Sphinx</a> 3.4.0.<br />
+            Created using <a href="https://sphinx-doc.org/">Sphinx</a> 3.4.3.<br />
         </p>
     </div>
 </div>

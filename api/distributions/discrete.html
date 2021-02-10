@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Discrete &#8212; PyMC3 3.10.0 documentation</title>
+    <title>Discrete &#8212; PyMC3 3.11.0 documentation</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/semantic-sphinx.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
@@ -159,6 +159,27 @@ can be specified.</p>
 </dd>
 </dl>
 <dl class="py method">
+<dt id="pymc3.distributions.discrete.Bernoulli.logcdf">
+<code class="sig-name descname">logcdf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.Bernoulli.logcdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the log of the cumulative distribution function for Bernoulli distribution
+at the specified value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+values are desired the values must be provided in a numpy array or theano tensor.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>TensorVariable</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pymc3.distributions.discrete.Bernoulli.logp">
 <code class="sig-name descname">logp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.Bernoulli.logp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate log-probability of Bernoulli distribution at specified value.</p>
@@ -248,6 +269,26 @@ The pmf of this distribution is</p>
 </dd>
 </dl>
 <dl class="py method">
+<dt id="pymc3.distributions.discrete.BetaBinomial.logcdf">
+<code class="sig-name descname">logcdf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.BetaBinomial.logcdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the log of the cumulative distribution function for BetaBinomial distribution
+at the specified value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>value: numeric</strong></dt><dd><p>Value for which log CDF is calculated.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>TensorVariable</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pymc3.distributions.discrete.BetaBinomial.logp">
 <code class="sig-name descname">logp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.BetaBinomial.logp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate log-probability of BetaBinomial distribution at specified value.</p>
@@ -333,6 +374,26 @@ The pmf of this distribution is</p>
 </dl>
 </dd>
 </dl>
+<dl class="py method">
+<dt id="pymc3.distributions.discrete.Binomial.logcdf">
+<code class="sig-name descname">logcdf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.Binomial.logcdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the log of the cumulative distribution function for Binomial distribution
+at the specified value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>value: numeric</strong></dt><dd><p>Value for which log CDF is calculated.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>TensorVariable</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pymc3.distributions.discrete.Binomial.logp">
 <code class="sig-name descname">logp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.Binomial.logp" title="Permalink to this definition">¶</a></dt>
@@ -556,6 +617,27 @@ The pmf of this distribution is</p>
 </dd>
 </dl>
 <dl class="py method">
+<dt id="pymc3.distributions.discrete.DiscreteUniform.logcdf">
+<code class="sig-name descname">logcdf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.DiscreteUniform.logcdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the log of the cumulative distribution function for Discrete uniform distribution
+at the specified value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+values are desired the values must be provided in a numpy array or theano tensor.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>TensorVariable</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pymc3.distributions.discrete.DiscreteUniform.logp">
 <code class="sig-name descname">logp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.DiscreteUniform.logp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate log-probability of DiscreteUniform distribution at specified value.</p>
@@ -630,6 +712,27 @@ The pmf of this distribution is</p>
 </tr>
 </tbody>
 </table>
+<dl class="py method">
+<dt id="pymc3.distributions.discrete.DiscreteWeibull.logcdf">
+<code class="sig-name descname">logcdf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.DiscreteWeibull.logcdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the log of the cumulative distribution function for Discrete Weibull distribution
+at the specified value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+values are desired the values must be provided in a numpy array or theano tensor.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>TensorVariable</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pymc3.distributions.discrete.DiscreteWeibull.logp">
 <code class="sig-name descname">logp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.DiscreteWeibull.logp" title="Permalink to this definition">¶</a></dt>
@@ -713,6 +816,27 @@ The pmf of this distribution is</p>
 </dl>
 </dd>
 </dl>
+<dl class="py method">
+<dt id="pymc3.distributions.discrete.Geometric.logcdf">
+<code class="sig-name descname">logcdf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.Geometric.logcdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the log of the cumulative distribution function for Geometric distribution
+at the specified value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+values are desired the values must be provided in a numpy array or theano tensor.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>TensorVariable</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pymc3.distributions.discrete.Geometric.logp">
 <code class="sig-name descname">logp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.Geometric.logp" title="Permalink to this definition">¶</a></dt>
@@ -801,6 +925,26 @@ The pmf of this distribution is</p>
 </dl>
 </dd>
 </dl>
+<dl class="py method">
+<dt id="pymc3.distributions.discrete.HyperGeometric.logcdf">
+<code class="sig-name descname">logcdf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.HyperGeometric.logcdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the log of the cumulative distribution function for HyperGeometric distribution
+at the specified value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>value: numeric</strong></dt><dd><p>Value for which log CDF is calculated.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>TensorVariable</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pymc3.distributions.discrete.HyperGeometric.logp">
 <code class="sig-name descname">logp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.HyperGeometric.logp" title="Permalink to this definition">¶</a></dt>
@@ -894,6 +1038,26 @@ and either in terms of alpha or n. The link between the parametrizations is give
 </dl>
 </dd>
 </dl>
+<dl class="py method">
+<dt id="pymc3.distributions.discrete.NegativeBinomial.logcdf">
+<code class="sig-name descname">logcdf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.NegativeBinomial.logcdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the log of the cumulative distribution function for NegativeBinomial distribution
+at the specified value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>value: numeric</strong></dt><dd><p>Value for which log CDF is calculated.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>TensorVariable</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pymc3.distributions.discrete.NegativeBinomial.logp">
 <code class="sig-name descname">logp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.NegativeBinomial.logp" title="Permalink to this definition">¶</a></dt>
@@ -1045,6 +1209,27 @@ The pmf of this distribution is</p>
 <p>The Poisson distribution can be derived as a limiting case of the
 binomial distribution.</p>
 <dl class="py method">
+<dt id="pymc3.distributions.discrete.Poisson.logcdf">
+<code class="sig-name descname">logcdf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.Poisson.logcdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the log of the cumulative distribution function for Poisson distribution
+at the specified value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+values are desired the values must be provided in a numpy array or theano tensor.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>TensorVariable</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pymc3.distributions.discrete.Poisson.logp">
 <code class="sig-name descname">logp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.Poisson.logp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate log-probability of Poisson distribution at specified value.</p>
@@ -1132,6 +1317,26 @@ specified).</p>
 </dl>
 </dd>
 </dl>
+<dl class="py method">
+<dt id="pymc3.distributions.discrete.ZeroInflatedBinomial.logcdf">
+<code class="sig-name descname">logcdf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.ZeroInflatedBinomial.logcdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the log of the cumulative distribution function for ZeroInflatedBinomial distribution
+at the specified value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>value: numeric</strong></dt><dd><p>Value for which log CDF is calculated.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>TensorVariable</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pymc3.distributions.discrete.ZeroInflatedBinomial.logp">
 <code class="sig-name descname">logp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.ZeroInflatedBinomial.logp" title="Permalink to this definition">¶</a></dt>
@@ -1232,6 +1437,26 @@ The pmf of this distribution is</p>
 </dd>
 </dl>
 <dl class="py method">
+<dt id="pymc3.distributions.discrete.ZeroInflatedNegativeBinomial.logcdf">
+<code class="sig-name descname">logcdf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.ZeroInflatedNegativeBinomial.logcdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the log of the cumulative distribution function for ZeroInflatedNegativeBinomial distribution
+at the specified value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>value: numeric</strong></dt><dd><p>Value for which log CDF is calculated.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>TensorVariable</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pymc3.distributions.discrete.ZeroInflatedNegativeBinomial.logp">
 <code class="sig-name descname">logp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.ZeroInflatedNegativeBinomial.logp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate log-probability of ZeroInflatedNegativeBinomial distribution at specified value.</p>
@@ -1321,6 +1546,27 @@ The pmf of this distribution is</p>
 </dd>
 </dl>
 <dl class="py method">
+<dt id="pymc3.distributions.discrete.ZeroInflatedPoisson.logcdf">
+<code class="sig-name descname">logcdf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.ZeroInflatedPoisson.logcdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the log of the cumulative distribution function for ZeroInflatedPoisson distribution
+at the specified value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>value: numeric or np.ndarray or theano.tensor</strong></dt><dd><p>Value(s) for which log CDF is calculated. If the log CDF for multiple
+values are desired the values must be provided in a numpy array or theano tensor.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>TensorVariable</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pymc3.distributions.discrete.ZeroInflatedPoisson.logp">
 <code class="sig-name descname">logp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.distributions.discrete.ZeroInflatedPoisson.logp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate log-probability of ZeroInflatedPoisson distribution at specified value.</p>
@@ -1394,7 +1640,7 @@ specified).</p>
             &copy; Copyright 2018, The PyMC Development Team.
         </p>
         <p>
-            Created using <a href="https://sphinx-doc.org/">Sphinx</a> 3.4.0.<br />
+            Created using <a href="https://sphinx-doc.org/">Sphinx</a> 3.4.3.<br />
         </p>
     </div>
 </div>

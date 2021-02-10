@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inference &#8212; PyMC3 3.10.0 documentation</title>
+    <title>Inference &#8212; PyMC3 3.11.0 documentation</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/semantic-sphinx.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
@@ -72,7 +72,7 @@
 <p>Functions for MCMC sampling.</p>
 <dl class="py function">
 <dt id="pymc3.sampling.fast_sample_posterior_predictive">
-<code class="sig-prename descclassname">pymc3.sampling.</code><code class="sig-name descname">fast_sample_posterior_predictive</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">trace</span><span class="p">:</span> <span class="n">Union<span class="p">[</span><a class="reference internal" href="#pymc3.backends.base.MultiTrace" title="pymc3.backends.base.MultiTrace">pymc3.backends.base.MultiTrace</a><span class="p">, </span>xarray.core.dataset.Dataset<span class="p">, </span>arviz.data.inference_data.InferenceData<span class="p">, </span>List<span class="p">[</span>Dict<span class="p">[</span>str<span class="p">, </span>numpy.ndarray<span class="p">]</span><span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">samples</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">model</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="model.html#pymc3.model.Model" title="pymc3.model.Model">pymc3.model.Model</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">var_names</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_size</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">random_seed</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>str<span class="p">, </span>numpy.ndarray<span class="p">]</span><a class="headerlink" href="#pymc3.sampling.fast_sample_posterior_predictive" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pymc3.sampling.</code><code class="sig-name descname">fast_sample_posterior_predictive</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">trace</span><span class="p">:</span> <span class="n">MultiTrace | Dataset | InferenceData | list[dict[str, np.ndarray]]</span></em>, <em class="sig-param"><span class="n">samples</span><span class="p">:</span> <span class="n">int | None</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">model</span><span class="p">:</span> <span class="n">Model | None</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">var_names</span><span class="p">:</span> <span class="n">list[str] | None</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_size</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">random_seed</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; dict<span class="p">[</span>str<span class="p">, </span>np.ndarray<span class="p">]</span><a class="headerlink" href="#pymc3.sampling.fast_sample_posterior_predictive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate posterior predictive samples from a model given a trace.</p>
 <p>This is a vectorized alternative to the standard <code class="docutils literal notranslate"><span class="pre">sample_posterior_predictive</span></code> function.
 It aims to be as compatible as possible with the original API, and is significantly
@@ -383,7 +383,7 @@ you could send</p>
 <span class="gp">   ...: </span>    <span class="n">y</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">Binomial</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="p">,</span> <span class="n">observed</span><span class="o">=</span><span class="n">h</span><span class="p">)</span>
 <span class="gp">   ...: </span>    <span class="n">trace</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span>
 
-<span class="gp">In [3]: </span><span class="n">pm</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">trace</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;stats&quot;</span><span class="p">)</span>
+<span class="gp">In [3]: </span><span class="n">az</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">trace</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;stats&quot;</span><span class="p">)</span>
 
 <span class="gh">Out[3]:</span>
 <span class="go">    mean     sd  hdi_3%  hdi_97%</span>
@@ -684,7 +684,7 @@ This is usually achieved by setting the <cite>tune</cite> parameter if
 e.g., [0, 2, 1, …]. Default is random</p>
 </dd>
 <dt><strong>transit_p: float</strong></dt><dd><p>The diagonal of the transition kernel. A value &gt; .5 gives anticorrelated proposals,
-which resulting in more efficient antithetical sampling.</p>
+which resulting in more efficient antithetical sampling. Default is 0.8</p>
 </dd>
 <dt><strong>model: PyMC Model</strong></dt><dd><p>Optional model for sampling step. Defaults to None (taken from context).</p>
 </dd>
@@ -867,6 +867,7 @@ so future proposals are not informed by unconverged tuning iterations.</p>
 <dt id="pymc3.step_methods.metropolis.Metropolis">
 <em class="property">class </em><code class="sig-prename descclassname">pymc3.step_methods.metropolis.</code><code class="sig-name descname">Metropolis</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymc3.step_methods.metropolis.Metropolis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Metropolis-Hastings sampling step</p>
+<p>Create an instance of a Metropolis stepper</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
@@ -885,17 +886,8 @@ S (and n). Defaults to normal.</p>
 </dd>
 <dt><strong>model: PyMC Model</strong></dt><dd><p>Optional model for sampling step. Defaults to None (taken from context).</p>
 </dd>
-<dt><strong>mode:  string or `Mode` instance.</strong></dt><dd><p>compilation mode passed to Theano functions</p>
+<dt><strong>mode: string or `Mode` instance.</strong></dt><dd><p>compilation mode passed to Theano functions</p>
 </dd>
-</dl>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>vars: list of sampling variables</strong></dt><dd></dd>
-<dt><strong>shared: dict of theano variable -&gt; shared variable</strong></dt><dd></dd>
-<dt><strong>blocked: Boolean (default True)</strong></dt><dd></dd>
 </dl>
 </dd>
 </dl>
@@ -2827,7 +2819,7 @@ same dimensional output</p>
             &copy; Copyright 2018, The PyMC Development Team.
         </p>
         <p>
-            Created using <a href="https://sphinx-doc.org/">Sphinx</a> 3.4.0.<br />
+            Created using <a href="https://sphinx-doc.org/">Sphinx</a> 3.4.3.<br />
         </p>
     </div>
 </div>
